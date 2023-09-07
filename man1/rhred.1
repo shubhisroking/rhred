@@ -1,0 +1,37 @@
+RHRED(1)                          User Commands                         RHRED(1)
+
+NAME
+       rhred - securely overwrite files and directories with random data
+
+SYNOPSIS
+       rhred <file_or_directory>
+
+DESCRIPTION
+       Rhred is a command-line tool for securely overwriting files and directories with random data, making it difficult or impossible to recover the original data. It uses the Rust programming language and the `rand` and `std` libraries.
+
+OPTIONS
+       <file_or_directory>
+              The path to the file or directory you want to overwrite.
+
+EXAMPLES
+       To overwrite a file:
+
+              rhred /path/to/file
+
+       To overwrite a directory:
+
+              rhred /path/to/directory
+
+AUTHOR
+       Rhred was written by [Your Name Here].
+
+REPORTING BUGS
+       If you encounter any issues or bugs while using Rhred, please report them to the GitHub issue tracker at https://github.com/shubhisroking/rhred/issues.
+
+COPYRIGHT
+       Rhred is licensed under the MIT License. See the `LICENSE` file for details.
+
+SEE ALSO
+       For more information about Rhred, please visit the Rhred GitHub repository at https://github.com/shubhisroking/rhred.
+
+                                  2023-09-07                        RHRED(1)
