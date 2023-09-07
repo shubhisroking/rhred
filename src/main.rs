@@ -1,4 +1,4 @@
-use rand::Rng;
+use rand::{RngCore, thread_rng};
 use std::error::Error;
 use std::fs::{self, File};
 use std::io::{BufWriter, Write};
@@ -31,7 +31,7 @@ fn shred_file(path: &Path) -> Result<(), Box<dyn Error>> {
     let mut file = BufWriter::new(File::create(path)?);
 
     // Shred the file by overwriting it with random data
-    let mut rng = rand::thread_rng();
+    let mut rng = thread_rng();
     let mut buffer = vec![0u8; 1024 * 1024];
     let mut remaining_bytes = file_size;
     while remaining_bytes > 0 {
